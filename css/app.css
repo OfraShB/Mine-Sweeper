@@ -1,0 +1,48 @@
+
+body {
+    background-color: dimgray;
+    text-align: center;
+}
+
+.cell {
+    background-color:rgb(238, 204, 181);
+}
+.hidden {
+    background-color:brown;
+    border:10px;
+}
+/* .flagged{
+
+} */
+
+.selected {
+    outline: 5px solid orange;
+}
+
+
+.mark {
+    background-color: lightpink
+}
+
+.center {
+
+    margin: auto;
+    /* width: 50%; */
+    /* border: 3px solid green; */
+    padding: 100px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+.game-board td {
+    width: 40px;
+    height:40px;
+    text-align: center;
+    font-size:1.4em;
+}
+
+#seconds, #tens, #minutes{
+    font-size:2em;
+    /* background-color:whitesmoke; */
+    color:paleturquoise
+  }
+
