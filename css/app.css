@@ -1,7 +1,42 @@
 
 body {
     background-color: dimgray;
-    text-align: center;
+    /* text-align: center; */
+    /* border-style: solid; */
+}
+.main-header{
+
+    width:100%;
+    /* margin: a*/
+   margin: auto;
+    /* padding: 50px; */
+    text-align: center; 
+    /* border: 1px solid black; */
+    
+    
+}
+th{
+    /* border: solid; */
+    width:  10%;
+}
+.safe{
+    border-radius: 50%;
+    width : 125px;
+    height: 50px;
+    text-align: center;  
+    left:150px;
+    background-color: teal;
+    font-size: medium;
+    margin-top: 20px;
+    border-width: 2px;
+    border-style: solid;
+}
+.safe-message{
+
+    font-size: 0.5em;
+    font-weight:2;
+    color: wheat;
+
 }
 
 .cell {
@@ -11,6 +46,11 @@ body {
     background-color:brown;
     border:10px;
 }
+.decorate-flag{
+    font-size: 2em;
+    width: 50;
+    font-family: Arial, Helvetica, sans-serif;
+}
 /* .flagged{
 
 } */
@@ -19,6 +59,15 @@ body {
     outline: 5px solid orange;
 }
 
+.level{
+    margin-top: 0px;
+    font-size:1.2em;
+    border-radius: 20%;
+}
+.best-time{
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .mark {
     background-color: lightpink
@@ -29,7 +78,7 @@ body {
     margin: auto;
     /* width: 50%; */
     /* border: 3px solid green; */
-    padding: 100px;
+    padding: 50px;
     /* margin-left: auto;
     margin-right: auto; */
 }
@@ -37,12 +86,40 @@ body {
     width: 40px;
     height:40px;
     text-align: center;
-    font-size:1.4em;
+    font-size:1.4em; 
 }
 
 #seconds, #tens, #minutes{
-    font-size:2em;
+    font-size:1.5em;
     /* background-color:whitesmoke; */
-    color:paleturquoise
+    color:paleturquoise;
+    /* text-align: center; */
+    position: relative;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    /* left: 800; */
   }
+  p{
+    top: -60px;
+  }
+  
+  .lives{
+      margin-top: 20px;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* margin: auto; */
+    /* padding: 20px; */
+    /* left:800px; */
+    font-size:2em;
+  }
+  
+  h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    color:rgb(238, 204, 181);
 
+    /* padding: 30px; */
+    /* margin: auto; */
+  }
