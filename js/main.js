@@ -209,7 +209,7 @@ function cellClicked(elCell, i, j) {
             gBoard[i][j].isShown = true
             gGame.shownCount++
 
-            console.log(gGame.shownCount)
+            //console.log(gGame.shownCount)
 
             renderBoard(gBoard)
 
@@ -240,11 +240,11 @@ function cellMarked(elCell, i, j) {
             }
         }
 
-        console.log('marked : ' + gGame.markedCount)
+        //console.log('marked : ' + gGame.markedCount)
 
 
         renderBoard(gBoard)
-        checkGameOver(i, j)
+        checkGameOver(i, j,true)
     }
 
 }
@@ -255,11 +255,11 @@ function expandShown(board, elCell, i, j) {
     for (var ind = 0; ind < board[i][j].emptyNegs.length; ind++) {
 
 
-        if (board[i][j].emptyNegs[ind].isShown === false) {
+        if (board[i][j].emptyNegs[ind].isShown === false && board[i][j].emptyNegs[ind].isMarked ===false) {
 
             board[i][j].emptyNegs[ind].isShown = true;
             gGame.shownCount++
-            console.log(gGame.shownCount)
+            //console.log(gGame.shownCount)
         }
     }
     renderBoard(gBoard);
@@ -373,6 +373,13 @@ function safeClick() {
 
 function checkGameOver(rowC, colC, isCalledByClicked) {
 
+    var sts = gLevel.SIZE ** 2 - gLevel.MINES
+       
+    console.log('lives left: '+gLives)
+    console.log(' mines: '+gLevel.MINES+' flagged: '+gGame.markedCount )
+    console.log(' suppose to be shown: '+ sts +' shown: '+gGame.shownCount)
+    
+
     if (isCalledByClicked) {
 
         if (gBoard[rowC][colC].isMarked === false) {
@@ -380,12 +387,13 @@ function checkGameOver(rowC, colC, isCalledByClicked) {
 
                 if (gLevel.SIZE === 4) {
 
-                    if (gLives < 0) {
+                    if (gLives === 0) {
+                        //console.log('bakara')
                         endGame(false)
                     }
                     else {
                         gLives--
-                        console.log('bakara')
+                        //console.log('bakara')
                         var life = document.querySelector('._1')
 
                         life.style.display = 'none';
